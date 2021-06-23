@@ -16,5 +16,5 @@
 
 * [URLImage](https://github.com/dmytro-anokhin/url-image)
 
-## Acknowledge
+## Acknowledgment
 [api.apiopen.top](https://api.apiopen.top/api.html#4c502eec73ce429fb1c4a7f519360d24) 提供接口
