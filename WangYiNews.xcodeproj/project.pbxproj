@@ -47,6 +47,7 @@
 		BBC5A4742681BF140023A824 /* NewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAPI.swift; sourceTree = "<group>"; };
 		BBC5A4772681CADD0023A824 /* NewsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsError.swift; sourceTree = "<group>"; };
 		BBC5A47A2681D2690023A824 /* WebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		BBD92FC62682C7AB00A56C4D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,8 @@
 		BBC5A43826818BBB0023A824 = {
 			isa = PBXGroup;
 			children = (
+				BBD92FC72682C95B00A56C4D /* previews */,
+				BBD92FC62682C7AB00A56C4D /* README.md */,
 				BBC5A43D26818BBC0023A824 /* Shared */,
 				BBC5A44726818BBD0023A824 /* iOS */,
 				BBC5A44E26818BBD0023A824 /* macOS */,
@@ -144,6 +147,13 @@
 				BBC5A4712681BDEE0023A824 /* ListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BBD92FC72682C95B00A56C4D /* previews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = previews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

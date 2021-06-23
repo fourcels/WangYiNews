@@ -74,12 +74,13 @@ struct WebView: View {
         self.url = url
     }
     var body: some View {
-        print(webViewStore.estimatedProgress)
-        return ZStack(alignment: .top) {
+        ZStack(alignment: .top) {
             WebViewUI(url, webView: webViewStore.webView)
                 .navigationTitle(webViewStore.title ?? "")
                 .navigationBarTitleDisplayMode(.inline)
-            ProgressView(value: webViewStore.estimatedProgress)
+            if webViewStore.estimatedProgress < 1.0 {
+                ProgressView(value: webViewStore.estimatedProgress)
+            }
         }
     }
 }
