@@ -20,6 +20,7 @@ struct ListView: View {
                             .onAppear {
                                 viewModel.loadMoreIfNeeded(currentItem: item)
                             }
+                            
                     }
                     
                 }
@@ -27,7 +28,8 @@ struct ListView: View {
                     ProgressView()
                 }
             }
-            .navigationTitle("今日热点")
+            
+            
         }
     }
 }

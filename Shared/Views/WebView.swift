@@ -49,6 +49,7 @@ public class WebViewStore: ObservableObject {
   }
 }
 
+#if os(iOS)
 struct WebViewUI: UIViewRepresentable {
     let webView: WKWebView
     let request: URLRequest
@@ -66,6 +67,27 @@ struct WebViewUI: UIViewRepresentable {
         webView.load(request)
     }
 }
+#endif
+
+#if os(macOS)
+struct WebViewUI: NSViewRepresentable {
+    let webView: WKWebView
+    let request: URLRequest
+    
+    init(_ url: String, webView: WKWebView) {
+        self.request = URLRequest(url: URL(string: url)!)
+        self.webView = webView
+    }
+
+    func makeNSView(context: NSViewRepresentableContext<WebViewUI>) -> WKWebView  {
+        return webView
+    }
+
+    func updateNSView(_ webView: WKWebView, context: NSViewRepresentableContext<WebViewUI>) {
+        webView.load(request)
+    }
+}
+#endif
 
 struct WebView: View {
     let url: String
@@ -73,11 +95,19 @@ struct WebView: View {
     init(url: String) {
         self.url = url
     }
+    
+    var main: some View {
+        WebViewUI(url, webView: webViewStore.webView)
+            .navigationTitle(webViewStore.title ?? "")
+    }
     var body: some View {
         ZStack(alignment: .top) {
-            WebViewUI(url, webView: webViewStore.webView)
-                .navigationTitle(webViewStore.title ?? "")
-                .navigationBarTitleDisplayMode(.inline)
+            #if os(iOS)
+                main
+                    .navigationBarTitleDisplayMode(.inline)
+            #else
+                main
+            #endif
             if webViewStore.estimatedProgress < 1.0 {
                 ProgressView(value: webViewStore.estimatedProgress)
             }

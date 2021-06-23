@@ -29,6 +29,8 @@
 		BBC5A4792681CADD0023A824 /* NewsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5A4772681CADD0023A824 /* NewsError.swift */; };
 		BBC5A47B2681D2690023A824 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5A47A2681D2690023A824 /* WebView.swift */; };
 		BBC5A47C2681D2690023A824 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5A47A2681D2690023A824 /* WebView.swift */; };
+		BBFFC91B26830D7E005095B0 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = BBFFC91A26830D7E005095B0 /* URLImage */; };
+		BBFFC91D26830D7E005095B0 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = BBFFC91C26830D7E005095B0 /* URLImageStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBFFC91D26830D7E005095B0 /* URLImageStore in Frameworks */,
+				BBFFC91B26830D7E005095B0 /* URLImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,7 @@
 				BBC5A44726818BBD0023A824 /* iOS */,
 				BBC5A44E26818BBD0023A824 /* macOS */,
 				BBC5A44626818BBD0023A824 /* Products */,
+				BBFFC91926830D7E005095B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +161,13 @@
 			path = previews;
 			sourceTree = "<group>";
 		};
+		BBFFC91926830D7E005095B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,6 +205,10 @@
 			dependencies = (
 			);
 			name = "WangYiNews (macOS)";
+			packageProductDependencies = (
+				BBFFC91A26830D7E005095B0 /* URLImage */,
+				BBFFC91C26830D7E005095B0 /* URLImageStore */,
+			);
 			productName = "WangYiNews (macOS)";
 			productReference = BBC5A44D26818BBD0023A824 /* WangYiNews.app */;
 			productType = "com.apple.product-type.application";
@@ -548,6 +564,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BBC5A46626818EE00023A824 /* XCRemoteSwiftPackageReference "url-image" */;
 			productName = URLImage;
+		};
+		BBFFC91A26830D7E005095B0 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBC5A46626818EE00023A824 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		BBFFC91C26830D7E005095B0 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBC5A46626818EE00023A824 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

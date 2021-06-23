@@ -4,8 +4,12 @@
 
 ## Preview
 
-<img src="./previews/WechatIMG514.jpeg"  height="600">
-<img src="./previews/WechatIMG515.jpeg"  height="600">
+### iOS
+<img src="./previews/iOS_1.jpeg"  height="600">
+<img src="./previews/iOS_2.jpeg"  height="600">
+
+### macOS
+<img src="./previews/macOS.png"  height="600">
 
 ## Requirements
 
